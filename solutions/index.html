@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<!-- see https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_slide_toggle -->
+
+<html>
+  <head>
+    <title>CSK003a</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script> 
+      $(document).ready(function(){
+        $("#flip").click(function(){
+          $("#panel").slideToggle("slow");
+        });
+      });
+    </script>
+    <style>
+      h1, p {
+        font-family: 'Montserrat Subrayada', sans-serif;
+        color: purple;
+      }
+      #panel, #flip {
+        border: solid 2px;
+        padding: 18px;
+      }
+      #panel {
+        display: none;
+        background-color: #440099;
+        border-color: #990044;
+        color: white;
+      }
+    </style>
+    
+    
+  </head>
+  
+  <body>
+    <h1>Welcome to Cardano Starter Kit #003!</h1>
+    <p>Where we party like it's <span id="myYear"></span></p>
+    
+    
+    <div id="flip">If you didn't come to party...</div>
+    <div id="panel">Don't bother knockin on my door</div>
+    
+    <script>
+      var year = 1981+18;
+      document.getElementById("myYear").innerHTML = year;
+    </script>
+    
+    </body>
+</html>
